@@ -1,1 +1,1 @@
-web manage.py migrate && gunicorn querrygetter.wsgi:application --log-file -
+web manage.py migrate && gunicorn querygetter.wsgi:application --log-file -
