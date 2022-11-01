@@ -60,9 +60,12 @@ MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+
+if DEBUG is True:
+  class AllIPS(list):
+      def __contains__(self, item):
+           return True
+  INTERNAL_IPS = AllIPS()
 
 ROOT_URLCONF = 'querygetter.urls'
 
@@ -134,8 +137,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 django_heroku.settings(locals())
-CSRF_COOKIE_SECURE = False
 
+CSRF_COOKIE_SECURE = False
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
