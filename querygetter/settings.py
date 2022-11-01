@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-b!xeb#o*3e^y)ydh__s_p@s90t5e&1y57d)0@vk4l6(qwuiuxe
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['querrygetter-production.up.railway.app']
+ALLOWED_HOST = ['*']
 
 # Application definition
 
