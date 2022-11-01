@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title> Query Runner </title>
+    </head>
+    <body>
+        <h1>Flight</h1>
+        <p>{{flight.name}}<p>
+        <p>{{flight.destination.name}}</p>
+        {% for airport in airports%}
+        <p>{{airport.name}}<p>
+        {% endfor %}
+    </body>
+    </html>
