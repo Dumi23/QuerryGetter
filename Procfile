@@ -1,1 +1,1 @@
-web manage.py migrate && gunicorn chatApp.wsgi:application --log-file -
+web manage.py migrate && gunicorn querrygetter.wsgi:application --log-file -
